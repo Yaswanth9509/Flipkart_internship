@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # Original Code by Vangara Yaswanth Sai 
 # Built for Flipkart Task-1 Robust Data Pipeline for Sales Insights 
-# Task Given :-  
+# Task Given :-  Build a robust data pipeline that consolidates sales data from multiple formats (CSV, JSON, Excel), cleans it, performs transformations, and delivers key business insights through reports and visualizations.
 # Date(Last Updated): 05-07-2025   
 """
 Custom Multi-Source Sales Data Pipeline & Business Insights Dashboard
