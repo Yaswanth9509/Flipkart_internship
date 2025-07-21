@@ -1,4 +1,4 @@
-#  Robust Multi-Source Sales Data Pipeline
+<img width="1920" height="1080" alt="Screenshot (21)" src="https://github.com/user-attachments/assets/2058cfb5-43e4-4dc7-92ac-ee4625993d6f" /><img width="1920" height="1080" alt="Screenshot (21)" src="https://github.com/user-attachments/assets/a4c17d70-6a81-4f43-904d-26597beb60a9" />#  Robust Multi-Source Sales Data Pipeline
 
 >  Built by **Vangara Yaswanth Sai** for Flipkart Task-1  
 > 🗓 Last Updated: **17 July 2025**
@@ -83,6 +83,24 @@ After successful execution, you’ll get:
 
 ##  Example Insights Extracted
 
+DATA OVERVIEW
+--------------------
+Total Records: 2000
+Total Columns: 14
+Numeric Columns: 9
+Text Columns: 5
+Date Columns: 0
+
+
+CATEGORICAL ANALYSIS
+------------------------------
+
+GENDER:
+  Unique values: 2
+  Top categories:
+    Female: 1016
+    Male: 984
+
 - Total records, column types
 - Financial summary: total revenue, average cost, etc.
 - Top categories by count
@@ -92,6 +110,9 @@ After successful execution, you’ll get:
 ---
 
 ##  Sample Visuals
+<img width="1920" height="1080" alt="Screenshot (22)" src="https://github.com/user-attachments/assets/685b6c03-aeb7-4474-912d-dd271b5169a5" />
+<img width="1920" height="1080" alt="Screenshot (23)" src="https://github.com/user-attachments/assets/60a1ab98-8e7c-4d70-975d-ef75c7aa3608" />
+<img width="1920" height="1080" alt="Screenshot (21)" src="https://github.com/user-attachments/assets/9d3f5996-6f5e-4b13-972d-ec5e1647cb45" />
 
 - Sales over time plot
 - Category distribution
