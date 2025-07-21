@@ -138,18 +138,6 @@ This project is under Git version control:
 
 ---
 
-##  Contributing
-
-Pull requests and forks are welcome!
-
----
-
-##  License
-
-This project is released under the **MIT License**. See `LICENSE` for details.
-
----
-
 ##  Author
 
 **Vangara Yaswanth Sai**  
