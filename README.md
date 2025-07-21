@@ -1,4 +1,4 @@
-<img width="1920" height="1080" alt="Screenshot (21)" src="https://github.com/user-attachments/assets/2058cfb5-43e4-4dc7-92ac-ee4625993d6f" /><img width="1920" height="1080" alt="Screenshot (21)" src="https://github.com/user-attachments/assets/a4c17d70-6a81-4f43-904d-26597beb60a9" />#  Robust Multi-Source Sales Data Pipeline
+#  Robust Multi-Source Sales Data Pipeline
 
 >  Built by **Vangara Yaswanth Sai** for Flipkart Task-1  
 > 🗓 Last Updated: **17 July 2025**
