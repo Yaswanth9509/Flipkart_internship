@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 # Original Code by Vangara Yaswanth Sai 
 # Built for Flipkart Task-1 Robust Data Pipeline for Sales Insights 
-# Task Given :-  Build a robust data pipeline that consolidates sales data from multiple formats (CSV, JSON, Excel), cleans it, performs transformations, and delivers key business insights through reports and visualizations.
-# Date(Last Updated): 05-07-2025   
+# Task Given :-  Build a robust data pipeline that consolidates sales data from multiple formats (CSV, JSON, Excel), 
+#                cleans it, performs transformations, and delivers key business insights through reports and visualizations.
+# Date(Last Updated): 15-07-2025   
 """
 Custom Multi-Source Sales Data Pipeline & Business Insights Dashboard
 Modified to work with your existing data files
@@ -16,7 +17,7 @@ This project demonstrates:
 
 Required Libraries: pandas, numpy, matplotlib, seaborn, tabulate, openpyxl, json
 """
-#TODO: Do check the program performance and Structure as per Task given ( Make the code to be able to handle Large Datasets and Big Data - Take some from Kaggle )
+#TODO: Making Automation for User Comfort ( Make the code to be able to handle Large Datasets and Big Data - Take some from Kaggle )
 
 # Importing the Required Libraries
 import pandas as pd
@@ -29,9 +30,9 @@ from datetime import datetime,timedelta
 import warnings
 import os
 from pathlib import Path
-import time # For using this a single time in whole code ( worth the sacrifice )
+import time # For using this a single time in whole code ( Maybe used for Automation )
 
-# Configure display settings for the device ( not Iphone though.. i hate it )
+# Configure display settings for the device 
 warnings.filterwarnings('ignore')
 pd.set_option('display.max_columns', None)
 pd.set_option('display.width', None)
@@ -46,15 +47,15 @@ class RobustSalesDataPipeline:
     """
     # This one calls himself as no one else would
     def __init__(self, csv_file=None, json_file=None, excel_file=None):
-        self.csv_file =  r"c:\Users\yaswa\OneDrive\Desktop\Flipkart Project\multisource_sales_dashboard_demo\sales_data.csv" # Add CSV path
-        self.json_file = r"c:\Users\yaswa\OneDrive\Desktop\Flipkart Project\multisource_sales_dashboard_demo\product_metadata.json" # Add JSON path
+        self.csv_file =  r"c:\Users\yaswa\OneDrive\Desktop\Flipkart Project\multisource_sales_dashboard_demo\users_data.csv" # Add CSV path
+        self.json_file = r"c:\Users\yaswa\OneDrive\Desktop\Flipkart Project\multisource_sales_dashboard_demo\mcc_codes.json" # Add JSON path
         self.excel_file = r"c:\Users\yaswa\OneDrive\Desktop\Flipkart Project\multisource_sales_dashboard_demo\region_info.xlsx" # Add Excel path
-        self.sales_data = None
+        self.users_data = None
         self.metadata = None
         self.region_data = None
         self.merged_data = None
         self.insights = {}
-        
+
     def inspect_data_files(self):
         """Inspect your data files to understand their structure"""
         print("\nINSPECTING YOUR DATA FILES")
@@ -214,10 +215,10 @@ class RobustSalesDataPipeline:
         print("\n" + "="*50)
         print("SALES DATA MERGING BEGINS...")
         print("="*50)
-        if self.sales_data is None:
+        if self.users_data is None:
             print("No primary data available for merging")
             return None
-        merged = self.sales_data.copy()
+        merged = self.users_data.copy()
         print(f"Starting with primary data: {len(merged)} records")
         # Sales merge with metadata
         if self.metadata is not None:
@@ -238,7 +239,7 @@ class RobustSalesDataPipeline:
                 print(f"Merged with metadata: {len(merged)} records")
             else:
                 print("Skipping metadata merge - no suitable key found to merge")
-        # Sales merge with region/additional data ( Mostly not useful just for those fluid and bouncy Datasets )
+        # Sales merge with region/additional data ( Mostly not useful, just for the fluid Datasets )
         if self.region_data is not None:
             print("\nMerging with additional data...")
             if merge_keys is None:
@@ -469,27 +470,27 @@ class RobustSalesDataPipeline:
         print("\nLOADING YOUR DATA FILES")
         print("-" * 35)
         if self.csv_file:
-            self.sales_data = self.load_csv_file_data()
+            self.users_data = self.load_csv_file_data()
         if self.json_file:
             self.metadata = self.load_json_file_data()
         if self.excel_file:
             self.region_data = self.load_excel_file_data()
         # Check if at least one file was loaded
-        if all(data is None for data in [self.sales_data, self.metadata, self.region_data]):
+        if all(data is None for data in [self.users_data, self.metadata, self.region_data]):
             print("No data was successfully loaded. Please check your file paths and formats.")
             return
         # Use the largest dataset as primary data
         datasets = []
-        if self.sales_data is not None:
-            datasets.append(('CSV', self.sales_data))
+        if self.users_data is not None:
+            datasets.append(('CSV', self.users_data))
         if self.metadata is not None:
             datasets.append(('JSON', self.metadata))
         if self.region_data is not None:
             datasets.append(('Excel', self.region_data))
         # Sort by size and use largest one there is as primary
         datasets.sort(key=lambda x: len(x[1]), reverse=True)
-        primary_type, self.sales_data = datasets[0]
-        print(f"\nUsing {primary_type} data as primary dataset ({len(self.sales_data)} records)")
+        primary_type, self.users_data = datasets[0]
+        print(f"\nUsing {primary_type} data as primary dataset ({len(self.users_data)} records)")
         # Reassign other available datasets
         if len(datasets) > 1:
             if primary_type != 'JSON' and any(t[0] == 'JSON' for t in datasets[1:]):
@@ -505,7 +506,7 @@ class RobustSalesDataPipeline:
         # Create Sales data visualizations ( Handled by User)
         response = input("Want to see the visualizations? (yes/no): ").strip().lower()
         if response == 'yes':
-            print(" Visualization Sequence Initiated..... PLease wait till plats are loaded ")
+            print(" Visualization Sequence Initiated..... PLease wait till the plots are loaded ")
             time.sleep(2) # That one time you see this time import in use 
             print(" Visualizations are generated ")
             self.create_sales_data_visualizations()
@@ -548,8 +549,8 @@ if __name__ == "__main__":
     print(f"Note : Pipeline execution started at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
     # MODIFY THESE PATHS TO YOUR ACTUAL FILES 
-    your_csv_file = r"c:\Users\yaswa\OneDrive\Desktop\Flipkart Project\multisource_sales_dashboard_demo\sales_data.csv"      # Replace with your CSV file path
-    your_json_file = r"c:\Users\yaswa\OneDrive\Desktop\Flipkart Project\multisource_sales_dashboard_demo\product_metadata.json"      # Replace with your JSON file path  
+    your_csv_file = r"c:\Users\yaswa\OneDrive\Desktop\Flipkart Project\multisource_sales_dashboard_demo\users_data.csv"      # Replace with your CSV file path
+    your_json_file = r"c:\Users\yaswa\OneDrive\Desktop\Flipkart Project\multisource_sales_dashboard_demo\mcc_code.json"      # Replace with your JSON file path  
     your_excel_file = r"c:\Users\yaswa\OneDrive\Desktop\Flipkart Project\multisource_sales_dashboard_demo\region_info.xlsx"      # Replace with your Excel file path
     # Initialize the pipeline with your own files
     pipeline = RobustSalesDataPipeline(
