@@ -1,23 +1,23 @@
-# 📊 Robust Multi-Source Sales Data Pipeline
+#  Robust Multi-Source Sales Data Pipeline
 
-> 🔧 Built by **Vangara Yaswanth Sai** for Flipkart Task-1  
-> 🗓️ Last Updated: **05 July 2025**
+>  Built by **Vangara Yaswanth Sai** for Flipkart Task-1  
+> 🗓 Last Updated: **17 July 2025**
 
 ---
 
-## 🚀 Overview
+##  Overview
 
 This project implements a **custom sales data pipeline** that ingests, cleans, analyzes, and visualizes sales-related data from multiple sources: **CSV, JSON, and Excel**.
 
 It is designed to be:
-- 📦 Modular  
-- 💡 Insight-rich  
-- 📈 Visualization-capable  
-- 🔁 Extensible for large-scale or real-time pipelines  
+-  Modular  
+-  Insight-rich  
+-  Visualization-capable  
+-  Extensible for large-scale or real-time pipelines  
 
 ---
 
-## 📂 File Structure
+##  File Structure
 
 ```plaintext
 Sales_Data_Pipeline_Main.py      # Main Python script with the complete pipeline
@@ -28,19 +28,19 @@ custom_insights_report.txt       # Auto-generated insights (output)
 
 ---
 
-## ⚙️ Features
+##  Features
 
-- ✅ Multi-source data loading (CSV, JSON, Excel)
-- 🧹 Auto-cleaning and type conversion
-- 🔗 Smart merging using auto-detected keys
-- 📊 Insight extraction: stats, revenue, category analysis, time series
-- 📉 Visualizations: histograms, bar charts, time plots, correlation matrix
-- 📄 Exports: Merged CSV, PNG dashboard, Text report
-- 🧠 Custom handling for quirky real-world datasets
+-  Multi-source data loading (CSV, JSON, Excel)
+-  Auto-cleaning and type conversion
+-  Smart merging using auto-detected keys
+-  Insight extraction: stats, revenue, category analysis, time series
+-  Visualizations: histograms, bar charts, time plots, correlation matrix
+-  Exports: Merged CSV, PNG dashboard, Text report
+-  Custom handling for quirky real-world datasets
 
 ---
 
-## 🧪 Requirements
+##  Requirements
 
 Install dependencies via pip:
 
@@ -50,7 +50,7 @@ pip install pandas numpy matplotlib seaborn tabulate openpyxl
 
 ---
 
-## 🖥️ Usage
+##  Usage
 
 ### 1. Configure Your File Paths
 
@@ -72,7 +72,7 @@ You will be prompted whether to generate visualizations.
 
 ---
 
-## 📝 Output Files
+##  Output Files
 
 After successful execution, you’ll get:
 - `custom_merged_data.csv`: Merged, cleaned dataset
@@ -81,7 +81,7 @@ After successful execution, you’ll get:
 
 ---
 
-## 🎯 Example Insights Extracted
+##  Example Insights Extracted
 
 - Total records, column types
 - Financial summary: total revenue, average cost, etc.
@@ -91,7 +91,7 @@ After successful execution, you’ll get:
 
 ---
 
-## 📸 Sample Visuals
+##  Sample Visuals
 
 - Sales over time plot
 - Category distribution
@@ -100,7 +100,7 @@ After successful execution, you’ll get:
 
 ---
 
-## 🤖 Error Handling
+##  Error Handling
 
 The pipeline uses specific exceptions:
 - Handles missing or corrupt files gracefully
@@ -109,7 +109,7 @@ The pipeline uses specific exceptions:
 
 ---
 
-## 📦 Version Control
+##  Version Control
 
 This project is under Git version control:
 - All major updates and commits are tracked
@@ -117,19 +117,19 @@ This project is under Git version control:
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Pull requests and forks are welcome!
 
 ---
 
-## 📜 License
+##  License
 
 This project is released under the **MIT License**. See `LICENSE` for details.
 
 ---
 
-## 👤 Author
+##  Author
 
 **Vangara Yaswanth Sai**  
-*Flipkart Data Pipeline Task-1 Contributor*
+*Flipkart Data Pipeline Task-1 Project*
